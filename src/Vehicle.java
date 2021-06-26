@@ -15,9 +15,15 @@ abstract public class Vehicle implements  Actions {
         this.stanLicznikaKM = stanLicznikaKM;
     }
 
-    public double WyliczZasieg()
-    {
-        return stanPaliwa/spalanie;
-    }
+    public abstract double WyliczZasieg();
 
+    @Override
+    public void Jedz(int kilometry) {
+        if(WyliczZasieg() >= kilometry)
+        {
+            stanLicznikaKM += kilometry;
+            stanPaliwa -= spalanie*kilometry/100;
+        }else System.out.println("Brakuje paliwa aby przejechac taki dystans");
+
+    }
 }

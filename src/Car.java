@@ -19,7 +19,7 @@ public class Car extends  Vehicle {
     @Override
     public double WyliczZasieg() {
 
-        return stanPaliwa/spalanie;
+        return stanPaliwa/spalanie*100;
     }
 }
 
