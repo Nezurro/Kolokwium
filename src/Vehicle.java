@@ -6,8 +6,9 @@ abstract public class Vehicle implements  Actions {
     Double stanPaliwa;
     Integer stanLicznikaKM;
     Double pojemnoscZbiornika;
+    Double wartosc;
 
-    public Vehicle(String numerRejestracyjny, Integer numerVin, String kolor, Double spalanie, Double stanPaliwa, Integer stanLicznikaKM, Double pojemnoscZbiornika) {
+    public Vehicle(String numerRejestracyjny, Integer numerVin, String kolor, Double spalanie, Double stanPaliwa, Integer stanLicznikaKM, Double pojemnoscZbiornika, Double wartosc) {
         this.numerRejestracyjny = numerRejestracyjny;
         this.numerVin = numerVin;
         this.kolor = kolor;
@@ -15,6 +16,7 @@ abstract public class Vehicle implements  Actions {
         this.stanPaliwa = stanPaliwa;
         this.stanLicznikaKM = stanLicznikaKM;
         this.pojemnoscZbiornika = pojemnoscZbiornika;
+        this.wartosc = wartosc;
     }
 
     public double WyliczZasieg() {
@@ -40,6 +42,15 @@ abstract public class Vehicle implements  Actions {
         }else
         stanPaliwa += iloscPaliwa;
         System.out.println("Pojazd zostal zatankowany");
+    }
+
+    @Override
+    public void Przemaluj(String kolor)
+    {
+        this.kolor = kolor;
+        wartosc += wartosc*0.05;
+        System.out.println("Przemalowano pojazd na kolor:" +kolor);
+        System.out.println("Obecna wartosc pojazdu wynosi: " + wartosc);
     }
 
 }
