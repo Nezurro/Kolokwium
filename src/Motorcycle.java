@@ -2,6 +2,12 @@ public class Motorcycle extends Vehicle{
     float pojemnoscSilnika;
     int moc;
 
+    public Motorcycle(String numerRejestracyjny, Integer numerVin, String kolor, Double spalanie, Double stanPaliwa, Integer stanLicznikaKM, float pojemnoscSilnika, int moc) {
+        super(numerRejestracyjny, numerVin, kolor, spalanie, stanPaliwa, stanLicznikaKM);
+        this.pojemnoscSilnika = pojemnoscSilnika;
+        this.moc = moc;
+    }
+
     @Override
     public void Jedz() {
         System.out.println("Pojazd sie porusza");
@@ -12,8 +18,10 @@ public class Motorcycle extends Vehicle{
         System.out.println("Pojazd został zatankowany");
     }
 
-    @Override
-    public void WyliczZasieg() {
 
+    @Override
+    public double WyliczZasieg() {
+
+        return stanPaliwa/spalanie;
     }
 }
