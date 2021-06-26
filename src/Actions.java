@@ -1,6 +1,5 @@
 public interface Actions {
-    public void Jedz();
-    public void Tankuj();
+    public void Tankuj(Double iloscPaliwa);
     public double WyliczZasieg();
 
     void Jedz(int kilometry);

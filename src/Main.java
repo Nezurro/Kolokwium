@@ -5,6 +5,9 @@ public class Main {
     public static void main(String[] args)
     {
         System.out.println(samochod.WyliczZasieg());
-        samochod.Jedz(10);
+        samochod.Jedz(1900);
+        System.out.println(samochod.stanPaliwa);
+        samochod.Tankuj(10.0);
+        System.out.println(samochod.stanPaliwa);
     }
 }

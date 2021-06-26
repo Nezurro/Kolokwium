@@ -6,20 +6,5 @@ public class Car extends  Vehicle {
         this.liczbaDrzwi = liczbaDrzwi;
     }
 
-    @Override
-    public void Jedz() {
-        System.out.println("Pojazd sie porusza");
-    }
-
-    @Override
-    public void Tankuj() {
-        System.out.println("Pojazd został zatankowany");
-    }
-
-    @Override
-    public double WyliczZasieg() {
-
-        return stanPaliwa/spalanie*100;
-    }
 }
 

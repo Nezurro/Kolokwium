@@ -15,7 +15,9 @@ abstract public class Vehicle implements  Actions {
         this.stanLicznikaKM = stanLicznikaKM;
     }
 
-    public abstract double WyliczZasieg();
+    public double WyliczZasieg() {
+        return stanPaliwa/spalanie*100;
+    }
 
     @Override
     public void Jedz(int kilometry) {
@@ -25,5 +27,11 @@ abstract public class Vehicle implements  Actions {
             stanPaliwa -= spalanie*kilometry/100;
         }else System.out.println("Brakuje paliwa aby przejechac taki dystans");
 
+    }
+
+    @Override
+    public void Tankuj(Double iloscPaliwa) {
+        stanPaliwa += iloscPaliwa;
+        System.out.println("Pojazd zostal zatankowany");
     }
 }
