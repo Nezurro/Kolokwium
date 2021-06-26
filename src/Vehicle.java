@@ -1,4 +1,4 @@
-abstract public class Vehicle {
+abstract public class Vehicle implements  Actions {
     String  numerRejestracyjny;
     Integer numerVin;
     String kolor;
