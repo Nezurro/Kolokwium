@@ -1,6 +1,6 @@
 public class Main {
 
-    static Car samochod = new Car("GDfasf",521521521, "czarny", 10.0, 50.0,50000,4);
+    static Car samochod = new Car("GDfasf",521521521, "czarny", 10.0, 50.0,50000,100.0,4);
 
     public static void main(String[] args)
     {
